@@ -1,0 +1,20 @@
+project:
+  type: book
+
+book:
+  title: "WS 23/24 Numerics Notes"
+  author: "Igor Dimitrov"
+  date: "10/30/2023"
+  chapters:
+    - index.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

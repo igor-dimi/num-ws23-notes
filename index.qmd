@@ -1,0 +1,3 @@
+# Preface {.unnumbered}
+
+Notes for the lecture "WS 23/24 Numerics 0" at Uni Heidelberg. 
