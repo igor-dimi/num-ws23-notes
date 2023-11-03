@@ -7,7 +7,7 @@ book:
   date: "10/30/2023"
   chapters:
     - index.qmd
-    - floating.qmd
+    - floating/floating.qmd
   downloads: pdf
 
 bibliography: references.bib
