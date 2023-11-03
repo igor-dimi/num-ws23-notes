@@ -22,3 +22,11 @@ Where S is the sign bit, 11 E's are the exponent bits and 52 M's are mantissa bi
 See @fig-floating for a visual summary. 
 
 ![floating-point](./imgs/floating_point_numbers.png){width=120% #fig-floating}
+
+**Examples**:
+
+* `realmin`: smallest normalized positive machine number in FP64 = $[\![\texttt{0|0 ... 01|0 ... 0}]\!]_{FP64} = 2^{1 - 1023} \times 1.0 = 2^{-1022}$ 
+* `realmax`: greatest normalized machine number in FP64 = $[\texttt{0|1...10|1...1}]_{\texttt{FP64}} \approx 1.7977\text{E}308$
+* $1 = 2^0 \times 1.0 = 2^{1023 - 1023} \times 1.0 = [\texttt{0|01...1|0...0}]_{\texttt{FP64}}$
+* `eps`: spacing in the interval $(1, 2)$. Note that the spacing is constant for each such interval, but grows as we go further down the number line. That is, the spacing in $(1000, 1001)$ is constant, but larger. 
+* number right after 1: $[\texttt{0|01...1|0...1}]_{\texttt{FP64}}$. Then the spacing, i.e. `eps` from above is $2^{-52}$
