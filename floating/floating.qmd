@@ -25,6 +25,8 @@ See @fig-floating for a visual summary.
 
 **Examples**:
 
+[`FP64` stands for IEEE **F**loating **P**oint **64** bit number representation. Whereas $[\cdot]_{\texttt{FP64}}$ is the `FP64` evaluation/interpration of the machine number]{.aside}
+
 * `realmin`: smallest normalized positive machine number in FP64 = $[\![\texttt{0|0 ... 01|0 ... 0}]\!]_{FP64} = 2^{1 - 1023} \times 1.0 = 2^{-1022}$ 
 * `realmax`: greatest normalized machine number in FP64 = $[\texttt{0|1...10|1...1}]_{\texttt{FP64}} \approx 1.7977\text{E}308$
 * $1 = 2^0 \times 1.0 = 2^{1023 - 1023} \times 1.0 = [\texttt{0|01...1|0...0}]_{\texttt{FP64}}$
