@@ -8,7 +8,7 @@ Let $\tilde{a}$ be a 64 bit IEEE floating point number. $\tilde{a}$ is represent
 S E ... E M ... M 
 ```
 
-Where S is the sign bit, 11 E's are the exponent bits and 52 M's are mantissa bits. Interpretation (Case analysis on value of $E$):
+Where S is the **sign** bit, 11 E's are the **exponent** bits and 52 M's are **mantissa** bits. Interpretation (Case analysis on value of $E$):
 
 1. $\texttt{E} = 0\,$, i.e. $\,\tilde{a}\,$ = S | 0 ... 0 | M:
 
