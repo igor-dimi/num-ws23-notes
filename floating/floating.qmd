@@ -3,6 +3,7 @@
 ## ANSI/IEEE 64 Bit
 
 Let $\tilde{a}$ be a 64 bit IEEE floating point number. $\tilde{a}$ is represented as
+
 ```{text}
 S E ... E M ... M 
 ```
@@ -21,5 +22,3 @@ Where S is the sign bit, 11 E's are the exponent bits and 52 M's are mantissa bi
 See @fig-floating for a visual summary. 
 
 ![floating-point](./imgs/floating_point_numbers.png){width=120% #fig-floating}
-
-## 
