@@ -1,0 +1,5 @@
+# Floating Point Numbers
+
+
+
+![floating-point](./imgs/floating_point_numbers.png){width=120%}
