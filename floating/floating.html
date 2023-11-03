@@ -155,13 +155,13 @@ ul.task-list li input[type="checkbox"] {
 <pre class="{text}"><code>S E ... E M ... M </code></pre>
 <p>Where S is the sign bit, 11 E’s are the exponent bits and 52 M’s are mantissa bits. Interpretation (Case analysis on value of <span class="math inline">\(E\)</span>):</p>
 <ol type="1">
-<li>S | 0 … 0 | M:
+<li><p><span class="math inline">\(\texttt{E} = 0\,\)</span>, i.e.&nbsp;<span class="math inline">\(\,\tilde{a}\,\)</span> = S | 0 … 0 | M:</p>
 <ol type="1">
 <li><span class="math inline">\(M = 0 \Rightarrow \tilde{a} = (-1)^{S} 0\)</span></li>
 <li><span class="math inline">\(M \neq 0 \Rightarrow \tilde{a} = (-1)^S \times 2^{-1022}\times 0.M\)</span> (<strong>subnormal range</strong>)</li>
 </ol></li>
-<li><span class="math inline">\(1 \leq E \leq 2046 \Rightarrow \tilde{a} = (-1)^S \times 2^{E - 1023} \times 1.M\)</span> (<strong>normal range</strong>)</li>
-<li>S | 1 … 1 | M:
+<li><p><span class="math inline">\(1 \leq E \leq 2046 \Rightarrow \tilde{a} = (-1)^S \times 2^{E - 1023} \times 1.M\)</span> (<strong>normal range</strong>)</p></li>
+<li><p><span class="math inline">\(\texttt{E} = 2047\,\)</span>, i.e.&nbsp;<span class="math inline">\(\,\tilde{a}\,\)</span> = S | 1 … 1 | M:</p>
 <ol type="1">
 <li><span class="math inline">\(M = 0 \Rightarrow \tilde{a} = (-1)^{S} \texttt{inf}\)</span></li>
 <li><span class="math inline">\(M \neq 0 \Rightarrow \tilde{a} = \texttt{NaN}\text{(Not a Number)}\)</span> (<strong>exceptions</strong>)</li>
@@ -177,11 +177,11 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Examples</strong>:</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><code>FP64</code> stands for IEEE <strong>F</strong>loating <strong>P</strong>oint <strong>64</strong> bit number representation. Whereas <span class="math inline">\([\cdot]_{\texttt{FP64}}\)</span> is the <code>FP64</code> evaluation/interpration of the machine number</span></div></div>
 <ul>
-<li><code>realmin</code>: smallest normalized positive machine number in FP64 = <span class="math inline">\([\![\texttt{0|0 ... 01|0 ... 0}]\!]_{FP64} = 2^{1 - 1023} \times 1.0 = 2^{-1022}\)</span></li>
-<li><code>realmax</code>: greatest normalized machine number in FP64 = <span class="math inline">\([\texttt{0|1...10|1...1}]_{\texttt{FP64}} \approx 1.7977\text{E}308\)</span></li>
-<li><span class="math inline">\(1 = 2^0 \times 1.0 = 2^{1023 - 1023} \times 1.0 = [\texttt{0|01...1|0...0}]_{\texttt{FP64}}\)</span></li>
-<li><code>eps</code>: spacing in the interval <span class="math inline">\((1, 2)\)</span>. Note that the spacing is constant for each such interval, but grows as we go further down the number line. That is, the spacing in <span class="math inline">\((1000, 1001)\)</span> is constant, but larger.</li>
-<li>number right after 1: <span class="math inline">\([\texttt{0|01...1|0...1}]_{\texttt{FP64}}\)</span>. Then the spacing, i.e.&nbsp;<code>eps</code> from above is <span class="math inline">\(2^{-52}\)</span></li>
+<li><p><code>realmin</code> is the smallest normalized positive machine number in FP64: <span class="math display">\[ [\![\texttt{0|0 ... 01|0 ... 0}]\!]_{FP64} = 2^{1 - 1023} \times 1.0 = 2^{-1022} \]</span></p></li>
+<li><p><code>realmax</code> is the greatest normalized machine number in FP64: <span class="math display">\[[\texttt{0|1...10|1...1}]_{\texttt{FP64}} \approx 1.7977\text{E}308\]</span></p></li>
+<li><p><span class="math inline">\(1 = 2^0 \times 1.0 = 2^{1023 - 1023} \times 1.0 = [\texttt{0|01...1|0...0}]_{\texttt{FP64}}\)</span></p></li>
+<li><p><code>eps</code> is defined as the spacing in the interval <span class="math inline">\((1, 2)\)</span>. Note that the spacing is constant for each such interval, but grows as we go further down the number line. That is, the spacing in <span class="math inline">\((1000, 1001)\)</span> is also constant, but larger.</p></li>
+<li><p>number right after 1 is <span class="math inline">\([\texttt{0|01...1|0...1}]_{\texttt{FP64}}\)</span>. Then the spacing, i.e.&nbsp;<code>eps</code> in the above definition is <span class="math inline">\(2^{-52}\)</span></p></li>
 </ul>
 
 
