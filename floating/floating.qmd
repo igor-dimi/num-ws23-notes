@@ -18,6 +18,8 @@ Where S is the sign bit, 11 E's are the exponent bits and 52 M's are mantissa bi
    1. $M = 0 \Rightarrow \tilde{a} = (-1)^{S} \texttt{inf}$
    2. $M \neq 0 \Rightarrow \tilde{a} = \texttt{NaN}\text{(Not a Number)}$ (**exceptions**)
 
-![floating-point](./imgs/floating_point_numbers.png){width=120%}
+See @fig-floating for a visual summary. 
+
+![floating-point](./imgs/floating_point_numbers.png){width=120% #fig-floating}
 
 ## 
