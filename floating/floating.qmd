@@ -24,7 +24,9 @@ Where S is the sign bit, 11 E's are the exponent bits and 52 M's are mantissa bi
 
 See @fig-floating for a visual summary. 
 
-![floating-point](./imgs/floating_point_numbers.png){width=120% #fig-floating}
+:::{.column-page}
+![Evaluation of the IEEE 64 bit floating point numbers](./imgs/floating_point_numbers.png){width=120% #fig-floating}
+:::
 
 **Examples**:
 
