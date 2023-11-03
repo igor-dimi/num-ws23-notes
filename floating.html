@@ -61,6 +61,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -119,7 +121,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ansiieee-64-bit" id="toc-ansiieee-64-bit" class="nav-link active" data-scroll-target="#ansiieee-64-bit"><span class="header-section-number">1.1</span> ANSI/IEEE 64 Bit</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">1.2</span> </a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -141,14 +150,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="ansiieee-64-bit" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="ansiieee-64-bit"><span class="header-section-number">1.1</span> ANSI/IEEE 64 Bit</h2>
+<p>Let <span class="math inline">\(\tilde{a}\)</span> be a 64 bit IEEE floating point number. <span class="math inline">\(\tilde{a}\)</span> is represented as</p>
+<pre class="{text}"><code>S E ... E M ... M </code></pre>
+<p>Where S is the sign bit, 11 E’s are the exponent bits and 52 M’s are mantissa bits. Interpretation (Case analysis on value of <span class="math inline">\(E\)</span>):</p>
+<ol type="1">
+<li>S | 0 … 0 | M:
+<ol type="1">
+<li><span class="math inline">\(M = 0 \Rightarrow \tilde{a} = (-1)^{S} 0\)</span></li>
+<li><span class="math inline">\(M \neq 0 \Rightarrow \tilde{a} = (-1)^S \times 2^{-1022}\times 0.M\)</span> (<strong>subnormal range</strong>)</li>
+</ol></li>
+<li><span class="math inline">\(1 \leq E \leq 2046 \Rightarrow \tilde{a} = (-1)^S \times 2^{E - 1023} \times 1.M\)</span> (<strong>normal range</strong>)</li>
+<li>S | 1 … 1 | M:
+<ol type="1">
+<li><span class="math inline">\(M = 0 \Rightarrow \tilde{a} = (-1)^{S} \texttt{inf}\)</span></li>
+<li><span class="math inline">\(M \neq 0 \Rightarrow \tilde{a} = \texttt{NaN}\text{(Not a Number)}\)</span> (<strong>exceptions</strong>)</li>
+</ol></li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./imgs/floating_point_numbers.png" class="img-fluid figure-img" style="width:120.0%"></p>
 <figcaption class="figure-caption">floating-point</figcaption>
 </figure>
 </div>
+</section>
+<section id="section" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="section"><span class="header-section-number">1.2</span> </h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
